@@ -12,6 +12,7 @@
               sitekey: '0x4AAAAAAABo1BKboDBdlv8r',
               callback: (token) => {
                 window.ReactNativeWebView.postMessage(token);
+                window.parent.postMessage(token, '*');
               },
             });
           }
